@@ -1,12 +1,17 @@
+//LINK TO FINISHED PROJECT: https://sarah2468.github.io/AsteroidsGame/
 //your variable declarations here
 Spaceship Bob = new Spaceship();
 Stars[] yo = new Stars[(int)(Math.random()*200)+30];
+Asteroid[] hi = new Asteroid[(int)(Math.random()*10)+5];
 public void setup() 
 {
   //your code here
   size(500, 500);
   for(int a = 0; a < yo.length; a++){
    yo[a] = new Stars();
+  }
+  for(int o = 0; o < hi.length; o++){
+   hi[o] = new Asteroid(); 
   }
 }
 public void draw() 
@@ -17,6 +22,10 @@ public void draw()
   Bob.move();
  for(int a = 0; a < yo.length; a++){
    yo[a].show();
+  }
+  for(int o = 0; o < hi.length; o++){
+   hi[o].show();
+   hi[o].move();
   }
 }
 
@@ -30,11 +39,9 @@ public void keyPressed()
   }
   if(key == '3'){
     Bob.turn((int)PI*3);
-    Bob.accelerate(0.1);
   }
   if(key == '4'){
-  Bob.turn((int)PI/3);
-  Bob.accelerate(-0.1);
+  Bob.turn((int)-PI*3);
    
   }
   if(key == '5'){
