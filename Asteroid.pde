@@ -2,8 +2,8 @@ class Asteroid extends Floater
 {
   private int rotSpeed;
   public Asteroid() {
-    myCenterX = 300;
-    myCenterY = 300;
+    myCenterX = (int)(Math.random()*500);
+    myCenterY = (int)(Math.random()*500);
     myDirectionX = ((Math.random()*3)-1);
     myDirectionY = ((Math.random()*3)-1);; //holds x and y coordinates of the vector for direction of travel   
     myPointDirection = 0;
